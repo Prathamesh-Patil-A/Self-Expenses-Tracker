@@ -52,13 +52,13 @@ def check_money(startbal, exps):
     elif bal2 < (startbal * 0.2):
         vibe = "Warnning: Low Balance!!!"
     else:
-        vibe = "Healthy: Good Financial Management."
+        vibe = "Good Financial Management."
     return spent, bal2, vibe
 
 def show(nm, exps, spent, bal2, vibe):
     print("\n" + "="*60)
     print(f"{'YOUR SPEND REPORT':^60}")
-    print(f"by: {nm}")
+    print(f"{'Name: ' + nm:^60}")
     print("="*60)
     print(f"{'No.':<4}|{'Item':<20}|{'Date':^16}|{'Amt':>10}")
     print("-"*60)
@@ -67,7 +67,7 @@ def show(nm, exps, spent, bal2, vibe):
     print("-"*60)
     print(f"{'SPENT':<40}|{spent:>10.2f}")
     print(f"{'LEFT':<40}|{bal2:>10.2f}")
-    print(f"HEALTH? : {vibe}")
+    print(f"HEALTH: {vibe}")
     print("="*60)
 
 def run():
@@ -77,3 +77,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+
